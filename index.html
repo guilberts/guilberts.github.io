@@ -1,34 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guilbert's Portfolio</title>
+  <title>Guilbert - Data Engineering Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
-    h1 { color: #2c3e50; }
-    p,li { color: #555; }
-    li {text-align:left;
-        line-height:24px;  }
-
+    :root {
+      --primary: #2c3e50;
+      --secondary: #34495e;
+      --accent: #3498db;
+      --light: #ecf0f1;
+      --text: #333;
+      --text-light: #7f8c8d;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: #f9f9f9;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    .profile-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    
+    .tagline {
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+    
+    .project-list {
+      margin: 30px 0;
+    }
+    
+    .project-item {
+      background: white;
+      margin-bottom: 25px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--accent);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .project-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .project-icon {
+      background: var(--accent);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+    }
+    
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .project-description {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    .project-link i {
+      margin-right: 6px;
+    }
+    
+    .project-link:hover {
+      color: var(--secondary);
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-top: 1px solid #eaeaea;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .social-link {
+      color: var(--text-light);
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-link:hover {
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>Hi, I'm Guilbert. This is my portfolio page hosted on GitHub Pages 🚀</p>
- <!-- Lista Ordenada (ol) -->
-  <br>
-<ul>
-  <li><p>Here I'm sharing a simple example of transforming data using PySpark, be in mind it's just a sample.
-        I took advantage and build a automate test the dockerimage and CI using Github Actions follow the link
-        to check it out <a href="https://github.com/guilberts/data-engineering-portfolio/blob/main/README.md">ETL with PySpark (Simulation)</a></p> 
-    </li>
-  <li><p>This project demonstrates a simplified data pipeline that simulates a job using PySpark and Apache Kafka.
-        It generates data dynamically, pushes it to a Kafka topic, then consumes the data back from the same topic. The output is displayed on the console, 
-        but the workflow can easily be extended to include data transformations and storage in other formats such as Parquet, CSV, or even insertion into a database.
-        Check it out <a href="https://github.com/guilberts/data-engineering-read-data-with-spark-kafka/tree/main">ETL with PySpark (Simulation)</a></p> 
-    </li>
-  <li>Comming soon..</li>
-</ul>
-  </body>
+  <header>
+    <div class="profile-icon">
+      <i class="fas fa-code"></i>
+    </div>
+    <h1>Guilbert S. Araújo</h1>
+    <p class="tagline">Data Engineering Portfolio</p>
+  </header>
+
+  <main>
+    <ul class="project-list">
+      <li class="project-item">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="project-title">ETL Pipeline with PySpark</h3>
+        </div>
+        <p class="project-description">Sample data transformation project with automated Docker testing and GitHub CI/CD workflows.</p>
+        <a href="https://github.com/guilberts/data-engineering-portfolio/blob/main/README.md" class="project-link">
+          <i class="fas fa-external-link-alt"></i> View Project
+        </a>
+      </li>
+      
+      <li class="project-item">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-stream"></i>
+          </div>
+          <h3 class="project-title">Spark-Kafka Data Pipeline</h3>
+        </div>
+        <p class="project-description">Real-time data processing simulation consuming from Kafka topics with Spark.</p>
+        <a href="https://github.com/guilberts/data-engineering-read-data-with-spark-kafka/tree/main" class="project-link">
+          <i class="fas fa-external-link-alt"></i> View Project
+        </a>
+      </li>
+      
+      <li class="project-item">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <h3 class="project-title">Next Project</h3>
+        </div>
+        <p class="project-description">Working on my next data engineering project. Stay tuned for updates.</p>
+        <span class="project-link">
+          <i class="fas fa-clock"></i> Coming Soon
+        </span>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Guilbert Silva. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+</body>
 </html>
